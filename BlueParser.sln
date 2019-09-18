@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueParser", "BlueParser\BlueParser.csproj", "{138B473D-EFC9-4BD7-B62F-4291B4D49B68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueParser.Tests", "BlueParser.Tests\BlueParser.Tests.csproj", "{CB58DA93-E870-4817-9DD5-EA8F469662AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryParser", "QueryParser\QueryParser.csproj", "{722F7D34-1BCC-4310-BFA2-B8BF49A70FD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryParser.Tests", "QueryParser.Tests\QueryParser.Tests.csproj", "{A3BD43F8-75A2-449E-94F9-893B9CE3473C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{138B473D-EFC9-4BD7-B62F-4291B4D49B68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{138B473D-EFC9-4BD7-B62F-4291B4D49B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{138B473D-EFC9-4BD7-B62F-4291B4D49B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{138B473D-EFC9-4BD7-B62F-4291B4D49B68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB58DA93-E870-4817-9DD5-EA8F469662AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB58DA93-E870-4817-9DD5-EA8F469662AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB58DA93-E870-4817-9DD5-EA8F469662AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB58DA93-E870-4817-9DD5-EA8F469662AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{722F7D34-1BCC-4310-BFA2-B8BF49A70FD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{722F7D34-1BCC-4310-BFA2-B8BF49A70FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{722F7D34-1BCC-4310-BFA2-B8BF49A70FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{722F7D34-1BCC-4310-BFA2-B8BF49A70FD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3BD43F8-75A2-449E-94F9-893B9CE3473C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3BD43F8-75A2-449E-94F9-893B9CE3473C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3BD43F8-75A2-449E-94F9-893B9CE3473C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3BD43F8-75A2-449E-94F9-893B9CE3473C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
