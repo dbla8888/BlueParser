@@ -5,7 +5,6 @@ using System.Text;
 
 namespace BlueParser
 {
-    //TODO: Refactor to remove internal state and make thread safe
     public class Parser<T>
     {
         protected IDictionary<string, ISymbol<T>> SymbolTable { get; }
@@ -59,7 +58,6 @@ namespace BlueParser
                 Symbol<T>.End;
         }
 
-        //TODO: look this over for clarity improvements
         private IEnumerator<ISymbol<T>> Tokenize(string input)
         {
             this.CurrentPosition = 0;
@@ -79,6 +77,7 @@ namespace BlueParser
                         CurrentPosition = j;
                     }
                 }
+
                 if(initialPosition == CurrentPosition)
                 {
                     throw new ParseException(this.CurrentLine, this.CurrentPosition, $"Unknown symbol at position {this.CurrentPosition}: {input[CurrentPosition]}");
@@ -95,7 +94,6 @@ namespace BlueParser
         public void Advance(string id)
         {
             if (!string.IsNullOrEmpty(id) && this.CurrentToken.Id != id) { throw new ParseException(this.CurrentLine, this.CurrentPosition, $"Expected '{id}', found {CurrentToken.Id} as line:{this.CurrentLine}, position:{this.CurrentPosition}"); }
-            //TODO: is this as intended?
             this.CurrentToken = GetNextToken();
         }
     }

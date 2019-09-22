@@ -20,10 +20,10 @@ namespace QueryParser
 
         public QueryParser()
         {
-            //TODO: Define different value tokents
+            //TODO: Define different value tokens
             //TODO: Typechecking on ComparisonExpressionTokens
             //TODO: Use instance regex
-            //TODO: Use type infor from properties to validate parsed types
+            //TODO: Use type info from properties to validate parsed types
             var symbols = new List<Symbol<Token>>()
             {
                 Symbol<Token>.Infix("=", 10, (Token lhs, Token rhs) => new ComparisonExpressionToken() { FieldName = (FieldNameToken)lhs, Operator = ConditionalOperator.EQUALS, Value = (ValueToken)rhs }),

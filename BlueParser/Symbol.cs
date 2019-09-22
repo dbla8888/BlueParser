@@ -10,7 +10,7 @@ namespace BlueParser
         String Id { get; }
         int BindingPower { get; }
         Func<string, int, int> Scanner { get; }
-        Func<string, T> Parser { get; }//TODO: This naming convention is confusing, it should be mapper or something like that;
+        Func<string, T> TokenParser { get; }//TODO: This naming convention is confusing, it should be mapper or something like that;
         bool Ignore { get; }
         Func<Parser<T>, T> Nud { get; }
         Func<Parser<T>, T, T> Led { get; }
@@ -23,15 +23,10 @@ namespace BlueParser
     {
         public string Id { get; set; }
         public int BindingPower { get; set; }
-
         public Func<string, int, int> Scanner { get; set; }
-
-        public Func<string, T> Parser { get; set; }
-
+        public Func<string, T> TokenParser { get; set; }
         public bool Ignore { get; set; }
-
         public Func<Parser<T>, T> Nud { get; set; }
-
         public Func<Parser<T>, T, T> Led { get; set; }
 
         public ISymbol<T> TokenClone(string id)
@@ -40,7 +35,7 @@ namespace BlueParser
             {
                 Id = id,
                 BindingPower = this.BindingPower,
-                Nud = this.Nud ?? (this.Parser == null ? null : new Func<Parser<T>, T>(parser => Parser(id))),//TODO: Should we be more explicit about handling constants?
+                Nud = this.Nud ?? (this.TokenParser == null ? null : new Func<Parser<T>, T>(parser => TokenParser(id))),//TODO: Should we be more explicit about handling constants?
                 Led = this.Led
             };
         }
@@ -53,7 +48,7 @@ namespace BlueParser
             {
                 Id = id,
                 BindingPower = 0,
-                Parser = selector,
+                TokenParser = selector,
                 Scanner = ScanByLiteral(id)
             };
         }
@@ -64,7 +59,7 @@ namespace BlueParser
             {
                 Id = id,
                 Scanner = (@string, pos) => pos + matcher(@string.Substring(pos)),
-                Parser = selector
+                TokenParser = selector
             };
         }
 
@@ -84,7 +79,7 @@ namespace BlueParser
                 }
                 return startPos;
             };
-            left.Parser = selector;
+            left.TokenParser = selector;
             return left;            
         }
 
