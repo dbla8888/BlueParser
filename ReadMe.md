@@ -1,8 +1,8 @@
-﻿#BlueParser
+# BlueParser
 
 BlueParser is a configurable [Pratt parser](https://en.wikipedia.org/wiki/Pratt_parser, useful for building small DSLs
 
-##Basic Usage:
+## Basic Usage:
 ```CSharp
     var symbols = new List<Symbol<int>>()
     {
@@ -20,7 +20,7 @@ BlueParser is a configurable [Pratt parser](https://en.wikipedia.org/wiki/Pratt_
 ```
 The solution also includes a more robust example of a query string parser that take a strongly typed model as an argument
 
-##Limitations
+## Limitations
 
  1. Currently symbols must be unique; most commonly this prevents the use of '-' for both minus and negative.
  2. A parser instance is not thread safe, though is cheap to create
