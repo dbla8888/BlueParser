@@ -10,6 +10,7 @@
     <RepositoryUrl>https://github.com/dbla8888/BlueParser</RepositoryUrl>
     <PackageTags />
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
