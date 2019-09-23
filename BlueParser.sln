@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueParser", "BlueParser\BlueParser.csproj", "{138B473D-EFC9-4BD7-B62F-4291B4D49B68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlueParser", "BlueParser\BlueParser.csproj", "{138B473D-EFC9-4BD7-B62F-4291B4D49B68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueParser.Tests", "BlueParser.Tests\BlueParser.Tests.csproj", "{CB58DA93-E870-4817-9DD5-EA8F469662AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlueParser.Tests", "BlueParser.Tests\BlueParser.Tests.csproj", "{CB58DA93-E870-4817-9DD5-EA8F469662AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryParser", "QueryParser\QueryParser.csproj", "{722F7D34-1BCC-4310-BFA2-B8BF49A70FD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueryParser", "QueryParser\QueryParser.csproj", "{722F7D34-1BCC-4310-BFA2-B8BF49A70FD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryParser.Tests", "QueryParser.Tests\QueryParser.Tests.csproj", "{A3BD43F8-75A2-449E-94F9-893B9CE3473C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueryParser.Tests", "QueryParser.Tests\QueryParser.Tests.csproj", "{A3BD43F8-75A2-449E-94F9-893B9CE3473C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,5 +36,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5A0FAF1-11BD-4FDB-A471-0FE53A04626E}
 	EndGlobalSection
 EndGlobal
