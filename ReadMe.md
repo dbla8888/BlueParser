@@ -1,6 +1,6 @@
 # BlueParser
 
-BlueParser is a configurable [Pratt parser](https://en.wikipedia.org/wiki/Pratt_parser, useful for building small DSLs
+BlueParser is a configurable [Pratt parser](https://en.wikipedia.org/wiki/Pratt_parser), useful for building small DSLs
 
 ## Basic Usage:
 ```CSharp
