@@ -17,12 +17,13 @@ namespace BlueParser.Tests
                 Symbol<int>.Infix("-", 10,(int left, int right) => left - right),
                 Symbol<int>.Infix("*", 20,(int left, int right) => left * right),
                 Symbol<int>.Infix("/", 20,(int left, int right) => left / right),
+                Symbol<int>.Prefix("!", 100, (int right) => -right),
                 Symbol<int>.Match("<integer>", (str) => Regex.Match(str, @"^\d+").Value.Length, 0, x => int.Parse(x))
             };
             symbols.AddRange(Symbol<int>.Group("(", ")", int.MaxValue));
             var parser = new Parser<int>(symbols);
-            var result = parser.Parse("1+(2*10)");
-            Assert.AreEqual(21, result.Value);
+            var result = parser.Parse("!1+(2*10)");
+            Assert.AreEqual(19, result.Value);
         }
     }
 }

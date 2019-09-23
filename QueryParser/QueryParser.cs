@@ -36,18 +36,6 @@ namespace QueryParser
                 Symbol<Token>.Infix("|", 5, (Token lhs, Token rhs) => new BooleanExpressionToken() { Lhs = lhs, Operator = ConditionalOperator.OR, Rhs = rhs }),
                 Symbol<Token>.Prefix("!", 100, (Token exp) => new NegationExpressionToken() { Expression = exp }),
                 Symbol<Token>.Delimited("<string>", "'", 0, (string x) => new ValueToken() { Value = x.Trim('\'') }),
-                //Symbol<Token>.Match(
-                //    "<Guid>",
-                //    (string @string)=> Regex.Match(@string, @"^[{(]?[0-9A-F]{8}[-]?([0-9A-F]{4}[-]?){3}[0-9A-F]{12}[)}]?", RegexOptions.IgnoreCase).Length,
-                //    1,
-                //    x =>
-                //    {
-                //        if(Guid.TryParse(x, out Guid @guid))
-                //        {
-                //            return new ValueToken() { Value = @guid };
-                //        }
-                //        throw new Exception($"Unable to parse '{x}' as guid");
-                //    }),
                 Symbol<Token>.Match(
                     "<number>",
                     (string @string)=> Regex.Match(@string, @"^(?:\d*[.,])?\d+").Length,
